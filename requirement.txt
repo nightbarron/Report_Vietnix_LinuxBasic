@@ -8,9 +8,9 @@
 - Làm quen với trình editor vim, vi,... done
 - Mount/Umount done
 - Symbolic Links done
-- Hard Links
-- Nén, giải nén
-- Đo lượng băng thông sử dụng (traffic inbound, outbound)
+- Hard Links done
+- Nén, giải nén done
+- Đo lượng băng thông sử dụng (traffic inbound, outbound) done
 - nmap, telnet, ping, ssh, copy file/thư mục từ local đến public host (máy ảo để thay thế)
 - gen ssh-key
 - Xem nội dung của file mà không cần dùng editor
