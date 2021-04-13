@@ -1,0 +1,23 @@
+- Xem dung lượng disk done
+- Xem các phân vùng done
+- Xem cpu, ram, network done
+- Theo dõi chi tiết tiến trình done
+- Liệt kê danh sách file/thư mục done
+- Tìm kiếm, copy, di chuyển,... file/thư mục done
+- Phân quyền cơ bản và phân quyền nâng cao done
+- Làm quen với trình editor vim, vi,... done
+- Mount/Umount done
+- Symbolic Links done
+- Hard Links
+- Nén, giải nén
+- Đo lượng băng thông sử dụng (traffic inbound, outbound)
+- nmap, telnet, ping, ssh, copy file/thư mục từ local đến public host (máy ảo để thay thế)
+- gen ssh-key
+- Xem nội dung của file mà không cần dùng editor
+- Đổ nội dung 1 chuỗi vào cuối file
+- find, grep, awk, sed, tr, head, tail, less, more, sort, uniq, cut, join, diff, xargs, traceroute, netstat, kill, pkill, wc, wget, git, rsyn, ping, tee, ln, mkdir
+- Hiểu về Standard Input, Output, Error.
+- Redirecting Standard Output.
+- Redireacting Standard Error.
+- /dev/null
+- Redirecting Standard Input.
