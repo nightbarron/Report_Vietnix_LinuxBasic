@@ -3,7 +3,7 @@
 ## BASE COMMAND:
 #### `man <name_of_tool>` to see explain for tool and using Google Search to get more detail.
 
-# *~~ MENU FOR TODAY ~~*
+# *~~ MENU FOR PART 01 ~~*
 
 1. <a href='#1'>Check diskspaces</a>
 1. <a href='#2'>Check partitions</a>
@@ -625,3 +625,5 @@ When User don't want to see any stupid thing from their Linux Computer, they jus
 ![Picture 4](src/45.png)
 
 # HAPPY ENDDING!
+
+<a href='../README.md'>Click here for return!</a>

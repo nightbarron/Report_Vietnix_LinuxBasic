@@ -1,0 +1,7 @@
+Tìm hiểu các khái niệm chuyên môn: (Execution time: 1 -> 3 days) 
+-  SSL và các thuật ngữ, vấn đề liên quan
+- Domain là gì?
+- DNS là gì? 1 số record của DNS.
+- Hosting, vps, server là gì?
+- Reverse proxy là gì, nguyên lý hoạt động?
+- So sánh giữa Nginx và Apache?
