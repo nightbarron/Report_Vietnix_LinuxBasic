@@ -12,9 +12,9 @@
 - Nén, giải nén done
 - Đo lượng băng thông sử dụng (traffic inbound, outbound) done
 - nmap, telnet, ping, ssh, copy file/thư mục từ local đến public host (máy ảo để thay thế)
-- gen ssh-key
-- Xem nội dung của file mà không cần dùng editor
-- Đổ nội dung 1 chuỗi vào cuối file
+- gen ssh-key done
+- Xem nội dung của file mà không cần dùng editor done
+- Đổ nội dung 1 chuỗi vào cuối file done
 - find, grep, awk, sed, tr, head, tail, less, more, sort, uniq, cut, join, diff, xargs, traceroute, netstat, kill, pkill, wc, wget, git, rsyn, ping, tee, ln, mkdir
 - Hiểu về Standard Input, Output, Error.
 - Redirecting Standard Output.

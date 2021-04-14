@@ -287,7 +287,7 @@ Note: In some case, we need to connect using certificate, and the command is: `s
 Code:
 
 ```
-sfpt -P <port> <user>@<ip>
+sftp -P <port> <user>@<ip>
 ```
 
 Result: We using commands as ftp to get/ put from server
@@ -296,4 +296,269 @@ Result: We using commands as ftp to get/ put from server
 
 # 15. Generate ssh-key
 
-We can 
+We can use `ssh-keygen` to create ssh key pairs for connection. But in some case, it requires some other tasks. So I writed a small tool to create ssh-keygen.
+
+Result:
+
+![Picture 24](src/24.png)
+
+And then using `sftp` to get file from server and we can connect like below:
+
+![Picture 25](src/25.png)
+
+# 16. Review file content
+
+Code:
+
+```
+cat <file_name> # OR
+head <file_name> # OR\
+tail <file_name>
+```
+
+Result: 
+
+![Picture 26](src/26.png)
+
+# 17. Append at the end of file
+
+Code:
+```
+echo <content> >> <file name>
+```
+
+Result:
+
+![Picture 27](src/27.png)
+
+# 18. Basic tool review
+
+## 18.1 find
+
+```
+find <dir to find> -iname '<maybe some words here>'
+```
+
+![Picture 28](src/28.png)
+
+## 18.2 grep
+
+This command ofthen uses to filter other command string result!
+
+```
+grep <content_to_filter>
+```
+
+## 18.3 awk
+
+This command uses for:
+* Scans a file line by line 
+* Splits each input line into fields 
+* Compares input line/fields to pattern 
+* Performs action(s) on matched lines 
+
+Code:
+
+```
+awk '/ahihi/ {print NR, $0}' <file name>
+```
+
+Result: 
+
+![Picture 29](src/29.png)
+
+Explain: The example above will scan line by line and if the line have `ahihi`, awk print it. `NR` will show the line number.
+
+## 18.3 sed
+
+This is a stream editor for filtering and transforming text.
+Code:
+
+```
+sed <option here> <script here> <file input> > <result file>
+#Example
+sed 's/ahihi/haha/' tmp.txt > changed.txt
+```
+
+Result: 
+
+![Picture 30](src/30.png)
+
+Note:
+* By default, the sed command replaces the first occurrence of the pattern in each line and it won’t replace the second, third…occurrence in the line. To replace all, we need `sed 's/ahihi/haha/g' tmp.txt`
+* result file **MUST** be the other name if we don't want to lost all.
+
+## 18.4 tr
+
+This tool using for translate or delete characters.
+Code:
+
+```
+tr flags [SET1] [SET2]
+# Example
+cat tmp.txt | tr [:lower:] [:upper:]
+```
+
+Result: 
+
+![Picture 31](src/31.png)
+
+## 18.5 head, tail, less, more
+
+These tools use to review data more professional.
+
+## 18.6 sort
+
+Typically, It just sort the file contents based on the lines!
+
+Result: 
+
+![Picture 32](src/32.png)
+
+## 18.7 uniq - report or omit repeated lines
+
+Result: 
+
+![Picture 33](src/33.png)
+
+## 18.8 cut - remove sections from each line of filesq
+
+Code:
+
+```
+cut <options here> <file>
+# Example
+echo "Ahihi do ngoc" | cut -d ' ' -f 2
+```
+
+Result:
+
+![Picture 34](src/34.png)
+
+## 18.9 join - join lines of two files on a common field
+
+Code:
+
+```
+join <options> <file1> <file2>
+```
+
+Result: 
+
+![Picture 35](src/35.png)
+
+Note: We must set order numbers for joining file to make sure it joins correctly.
+
+## 18.10 diff - compare files line by line
+
+Result:
+
+![Picture 36](src/36.png)
+
+Explain: the result show that, `1c1` we need to change the first line of file1 to get the same as file2.
+
+## 18.11 xargs - build and execute command lines from standard input
+xarIt is a tool support execute command with may options.
+
+Code:
+```
+xargs <options> <command>
+```
+
+Result:
+
+![Picture 37](src/37.png)
+
+## 18.12 traceroute - print the route packets trace to network host
+
+Code:
+```
+traceroute <ip> <package len>
+```
+Result:
+
+![Picture 38](src/38.png)
+
+## 18.13 netstat - Print  network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+
+Code:
+```
+netstat <options>
+```
+
+Example Result:
+
+![Picture 39](src/39.png)
+
+## 18.14 kill, pkill
+While `kill` is a kill system call, `pkill` is also kill but can determine the PIDs for us, based on things like, process name, owner of the process, session id, etc.
+
+Result: 
+
+![Picture 40](src/40.png)
+
+## 18.15 wc - print newline, word, and byte counts for each file
+
+Result:
+
+![Picture 41](src/41.png)
+
+## 18.16 wget - it gets resource from web (as download)
+
+## 18.17 git - the stupid content tracker
+
+Code;
+
+```
+git config ...              # config for first use
+git clone <url>             # for clone resource
+git add ...                 # for add file/ folder to git repo
+git commit -m "<command to commit>"
+git push                    # push src to git
+```
+
+## 18.18 rsync - a fast, versatile, remote (and local) file-copying tool
+
+Code:
+```
+rsync -r <src host dir> <des host dir>
+```
+
+Result:
+
+![Picture 42](src/42.png)
+
+# OR We can rsync over network like below:
+
+```
+rsync -a -e "ssh -p 2222" tuandlh@192.168.75.75:tmp/ tmp
+```
+
+Result: 
+
+![Picture 43](src/43.png)
+
+## 18.19 tee - read and write file
+
+Result:
+
+![Picture 44](src/44.png)
+
+## 18.20 ln, mkdir - link file and make directory
+
+# 19. Understanding: Standard Input, Output, Error
+
+As I understamd: `Standard streams` is the method abstract connection channel between User and Computer (working over I/O Driver). Originally User input values via a physically connected system console (input via keyboard, mouse, ...) and Standard Streams abstract this Input as `Standard Input` then send it to system for executing, handing,... The output will as `Standard Output` and send it to Output device like monitor. If there is any error, a `standard Error` will return.
+
+# 20. Redirecting stdout, stderr
+
+* When `stdout` returning values, it will be send to other `stdin` stream for next execution.
+* If `stderr` return any errors, it will be send to other `stdin` stream which maybe use for Developer, or User!
+
+# 21. /dev/null - A place for nothing to be EXIST!
+
+When User don't want to see any stupid thing from their Linux Computer, they just add `> /dev/null` at the end! LIKE BELOW:
+
+![Picture 4](src/45.png)
+
+# HAPPY ENDDING!
