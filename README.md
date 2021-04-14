@@ -4,28 +4,29 @@
 #### `man <name_of_tool>` to see explain for tool and using Google Search to get more detail.
 
 # *~~ MENU FOR TODAY ~~*
-
-1. <a href='#1'><h3>Check diskspaces</h3></a>
-1. <a href='#2'><h3>Check partitions</h3></a>
-1. <a href='#3'><h3>Check cpu, ram, network</h3></a>
-1. <a href='#4'><h3>Process Monitor</h3></a>
-1. <a href='#5'><h3>List files/ directories</h3></a>
-1. <a href='#6'><h3>Find, Copy, Move, Rename</h3></a>
-1. <a href='#7'><h3>System Decentralization</h3></a>
-1. <a href='#8'><h3>Editors</h3></a>
-1. <a href='#9'><h3>Mount/ Unmount</h3></a>
-1. <a href='#10'><h3>Symbolic Links</h3></a>
-1. <a href='#11'><h3>Hard Links</h3></a>
-1. <a href='#12'><h3>Compressed/ Depressed</h3></a>
-1. <a href='#13'><h3>Network Traffic Tracking</h3></a>
-1. <a href='#14'><h3>nmap, telnet, ping, ssh, tranfer from local to public host</h3></a>
-1. <a href='#15'><h3>Generate ssh-key</h3></a>
-1. <a href='#16'><h3>Review file content</h3></a>
-1. <a href='#17'><h3>Append at the end of file</h3></a>
-1. <a href='#18'><h3>Basic tool review</h3></a>
-1. <a href='#19'><h3>Understanding: Standard Input, Output, Error</h3></a>
-1. <a href='#20'><h3>Redirecting stdout, stderr</h3></a>
-1. <a href='#21'><h3>/dev/null - A place for nothing to be EXIST!</h3></a>
+1. Part 1
+    1. <a href='#1'>Check diskspaces</a>
+    1. <a href='#2'>Check partitions</a>
+    1. <a href='#3'>Check cpu, ram, network</a>
+    1. <a href='#4'>Process Monitor</a>
+    1. <a href='#5'>List files/ directories</a>
+    1. <a href='#6'>Find, Copy, Move, Rename</a>
+    1. <a href='#7'>System Decentralization</a>
+    1. <a href='#8'>Editors</a>
+    1. <a href='#9'>Mount/ Unmount</a>
+    1. <a href='#10'>Symbolic Links</a>
+    1. <a href='#11'>Hard Links</a>
+    1. <a href='#12'>Compressed/ Depressed</a>
+    1. <a href='#13'>Network Traffic Tracking</a>
+    1. <a href='#14'>nmap, telnet, ping, ssh, tranfer from local to public host</a>
+    1. <a href='#15'>Generate ssh-key</a>
+    1. <a href='#16'>Review file content</a>
+    1. <a href='#17'>Append at the end of file</a>
+    1. <a href='#18'>Basic tool review</a>
+    1. <a href='#19'>Understanding: Standard Input, Output, Error</a>
+    1. <a href='#20'>Redirecting stdout, stderr</a>
+    1. <a href='#21'>/dev/null - A place for nothing to be EXIST!</a>
+1. <a href='part02/README.md'>Part 2</a>
 
 <div id='1'></div>
 
