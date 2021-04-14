@@ -3,7 +3,31 @@
 ## BASE COMMAND:
 #### `man <name_of_tool>` to see explain for tool and using Google Search to get more detail.
 
+# *~~ MENU FOR TODAY ~~*
 
+1. <a href='#'><h3>Check diskspaces</h3></a>
+1. <a href='#'><h3>Check partitions</h3></a>
+1. <a href='#'><h3>Check cpu, ram, network</h3></a>
+1. <a href='#'><h3>Process Monitor</h3></a>
+1. <a href='#'><h3>List files/ directories</h3></a>
+1. <a href='#'><h3>Find, Copy, Move, Rename</h3></a>
+1. <a href='#'><h3>System Decentralization</h3></a>
+1. <a href='#'><h3>Editors</h3></a>
+1. <a href='#'><h3>Mount/ Unmount</h3></a>
+1. <a href='#'><h3>Symbolic Links</h3></a>
+1. <a href='#'><h3>Hard Links</h3></a>
+1. <a href='#'><h3>Compressed/ Depressed</h3></a>
+1. <a href='#'><h3>Network Traffic Tracking</h3></a>
+1. <a href='#'><h3>nmap, telnet, ping, ssh, tranfer from local to public host</h3></a>
+1. <a href='#'><h3>Generate ssh-key</h3></a>
+1. <a href='#'><h3>Review file content</h3></a>
+1. <a href='#'><h3>Append at the end of file</h3></a>
+1. <a href='#'><h3>Basic tool review</h3></a>
+1. <a href='#'><h3>Understanding: Standard Input, Output, Error</h3></a>
+1. <a href='#'><h3>Redirecting stdout, stderr</h3></a>
+1. <a href='#'><h3>/dev/null - A place for nothing to be EXIST!</h3></a>
+
+<div id='1'></div>
 ## 1. Check diskspaces
 Code:
 ```
@@ -12,7 +36,7 @@ df -a
 Result:
 ![Picture 01](src/01.png)
 
-
+<div id='2'></div>
 ## 2. Check partitions
 Code:
 ```
@@ -21,6 +45,7 @@ fdisk -l
 Result:
 ![Picture 02](src/02.png)
 
+<div id='3'></div>
 ## 3. Check cpu, ram, network
 ### 3.1 Check system realtime
 Code:
@@ -50,6 +75,8 @@ Result 02:
 
 ![Picture 05](src/04.png)
 
+<div id='4'></div>
+
 # 4. Process Monitor
 Code:
 ```
@@ -70,6 +97,8 @@ Result:
 Explain:
 - We can use `htop` to see CPU stat, Mem stat and many process which is running in system. `htop` is a realtime tool.
 
+<div id='5'></div>
+
 # 5. List files/ directories
 Code:
 ```
@@ -78,6 +107,8 @@ ls && ls -la
 Result:
 ![Picture 08](src/08.png)
 Explain: `ls` is command to show files/directories which have in dir, `ls -la` can also see `chmod` status of files/ folders inside.
+
+<div id='6'></div>
 
 # 6. Find, Copy, Move, Rename
 ## 6.1 Find
@@ -101,6 +132,8 @@ Result:
 
 ![Picture 10](src/10.png)
 
+<div id='7'></div>
+
 # 7. System Decentralization 
 
 Code:
@@ -117,6 +150,8 @@ Explain:
 * There are 3 types of rule with `r-read`, `w-write`, `x-excute` match with 4 types of urgent `u-user`, `g-group`, `o-other`, `a-all`.
 * We can also using `chmod 777 hello.sh` for example to grant role with `1-excute`, `2-write`, `4-read`. The order of number is presented as `user_group_other`.
 
+<div id='8'></div>
+
 # 8. Editors
 
 Code:
@@ -127,6 +162,8 @@ Explain:
 * For `gedit`, we using as notepad
 * For `nano`, when we editted, we can use `ctrl + s` to save and `ctrl + x` to exit
 * For `vi`, press `i` to using insert mode. `ESC` to exit insert, `:wq` to save and exit, `:q!` to ignore change and exit.
+
+<div id='9'></div>
 
 # 9. Mount/ Unmount
 
@@ -143,6 +180,8 @@ Result:
 
 ![Picture 13](src/13.png)
 
+<div id='10'></div>
+
 # 10. Symbolic Links
 
 Code:
@@ -158,6 +197,7 @@ Result:
 
 Explain: Symbolic Links is a method which new link is linked to the older file. Both files have the same content. We can copy the sym file to any without interrupted the link. It likes a Shorcut in Windows. And when the origin file is removed, the sym link will be interrupted.
 
+<div id='11'></div>
 
 # 11. Hard Links
 
@@ -173,6 +213,8 @@ Result:
 ![Picture 15](src/15.png)
 
 Explain: This the the low-level links. the both files is linked to the same address space (which we call #inode). When one of the two is deleted. The other will not be effected!
+
+<div id='12'></div>
 
 # 12. Compressed/ Depressed
 
@@ -202,6 +244,8 @@ zip -e <file_name>.zip <list_of_files>
 unzip <file_name> <destination dir>
 ```
 
+<div id='13'></div>
+
 # 13. Network Traffic Tracking
 
 In this part, I used `vnstat` as a main tool for monitor, but it needs time to get data from network card.
@@ -223,6 +267,8 @@ Result sample:
 ![Picture 18](src/18.png)
 
 Explain: `tx` and `rx` is `transmitted` and `received` data in network.
+
+<div id='14'></div>
 
 # 14. nmap, telnet, ping, ssh, tranfer from local to public host
 
@@ -282,7 +328,7 @@ Note: In some case, we need to connect using certificate, and the command is: `s
 
 ## 14.5 Transfer using SFTP
 
-### Required: SSHD is running in target file!
+### Required: SSHD is running in target host!
 
 Code:
 
@@ -293,6 +339,8 @@ sftp -P <port> <user>@<ip>
 Result: We using commands as ftp to get/ put from server
 
 ![Picture 23](src/23.png)
+
+<div id='15'></div>
 
 # 15. Generate ssh-key
 
@@ -305,6 +353,8 @@ Result:
 And then using `sftp` to get file from server and we can connect like below:
 
 ![Picture 25](src/25.png)
+
+<div id='16'></div>
 
 # 16. Review file content
 
@@ -320,6 +370,8 @@ Result:
 
 ![Picture 26](src/26.png)
 
+<div id='17'></div>
+
 # 17. Append at the end of file
 
 Code:
@@ -330,6 +382,8 @@ echo <content> >> <file name>
 Result:
 
 ![Picture 27](src/27.png)
+
+<div id='18'></div>
 
 # 18. Basic tool review
 
@@ -458,7 +512,7 @@ Result:
 Explain: the result show that, `1c1` we need to change the first line of file1 to get the same as file2.
 
 ## 18.11 xargs - build and execute command lines from standard input
-xarIt is a tool support execute command with may options.
+xargs is a tool support execute command with may options.
 
 Code:
 ```
@@ -546,14 +600,20 @@ Result:
 
 ## 18.20 ln, mkdir - link file and make directory
 
+<div id='19'></div>
+
 # 19. Understanding: Standard Input, Output, Error
 
 As I understamd: `Standard streams` is the method abstract connection channel between User and Computer (working over I/O Driver). Originally User input values via a physically connected system console (input via keyboard, mouse, ...) and Standard Streams abstract this Input as `Standard Input` then send it to system for executing, handing,... The output will as `Standard Output` and send it to Output device like monitor. If there is any error, a `standard Error` will return.
+
+<div id='20'></div>
 
 # 20. Redirecting stdout, stderr
 
 * When `stdout` returning values, it will be send to other `stdin` stream for next execution.
 * If `stderr` return any errors, it will be send to other `stdin` stream which maybe use for Developer, or User!
+
+<div id='21'></div>
 
 # 21. /dev/null - A place for nothing to be EXIST!
 
