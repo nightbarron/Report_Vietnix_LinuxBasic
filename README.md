@@ -5,27 +5,27 @@
 
 # *~~ MENU FOR TODAY ~~*
 
-1. <a href='#'><h3>Check diskspaces</h3></a>
-1. <a href='#'><h3>Check partitions</h3></a>
-1. <a href='#'><h3>Check cpu, ram, network</h3></a>
-1. <a href='#'><h3>Process Monitor</h3></a>
-1. <a href='#'><h3>List files/ directories</h3></a>
-1. <a href='#'><h3>Find, Copy, Move, Rename</h3></a>
-1. <a href='#'><h3>System Decentralization</h3></a>
-1. <a href='#'><h3>Editors</h3></a>
-1. <a href='#'><h3>Mount/ Unmount</h3></a>
-1. <a href='#'><h3>Symbolic Links</h3></a>
-1. <a href='#'><h3>Hard Links</h3></a>
-1. <a href='#'><h3>Compressed/ Depressed</h3></a>
-1. <a href='#'><h3>Network Traffic Tracking</h3></a>
-1. <a href='#'><h3>nmap, telnet, ping, ssh, tranfer from local to public host</h3></a>
-1. <a href='#'><h3>Generate ssh-key</h3></a>
-1. <a href='#'><h3>Review file content</h3></a>
-1. <a href='#'><h3>Append at the end of file</h3></a>
-1. <a href='#'><h3>Basic tool review</h3></a>
-1. <a href='#'><h3>Understanding: Standard Input, Output, Error</h3></a>
-1. <a href='#'><h3>Redirecting stdout, stderr</h3></a>
-1. <a href='#'><h3>/dev/null - A place for nothing to be EXIST!</h3></a>
+1. <a href='#1'><h3>Check diskspaces</h3></a>
+1. <a href='#2'><h3>Check partitions</h3></a>
+1. <a href='#3'><h3>Check cpu, ram, network</h3></a>
+1. <a href='#4'><h3>Process Monitor</h3></a>
+1. <a href='#5'><h3>List files/ directories</h3></a>
+1. <a href='#6'><h3>Find, Copy, Move, Rename</h3></a>
+1. <a href='#7'><h3>System Decentralization</h3></a>
+1. <a href='#8'><h3>Editors</h3></a>
+1. <a href='#9'><h3>Mount/ Unmount</h3></a>
+1. <a href='#10'><h3>Symbolic Links</h3></a>
+1. <a href='#11'><h3>Hard Links</h3></a>
+1. <a href='#12'><h3>Compressed/ Depressed</h3></a>
+1. <a href='#13'><h3>Network Traffic Tracking</h3></a>
+1. <a href='#14'><h3>nmap, telnet, ping, ssh, tranfer from local to public host</h3></a>
+1. <a href='#15'><h3>Generate ssh-key</h3></a>
+1. <a href='#16'><h3>Review file content</h3></a>
+1. <a href='#17'><h3>Append at the end of file</h3></a>
+1. <a href='#18'><h3>Basic tool review</h3></a>
+1. <a href='#19'><h3>Understanding: Standard Input, Output, Error</h3></a>
+1. <a href='#20'><h3>Redirecting stdout, stderr</h3></a>
+1. <a href='#21'><h3>/dev/null - A place for nothing to be EXIST!</h3></a>
 
 <div id='1'></div>
 ## 1. Check diskspaces
