@@ -28,6 +28,7 @@
 1. <a href='#21'><h3>/dev/null - A place for nothing to be EXIST!</h3></a>
 
 <div id='1'></div>
+
 ## 1. Check diskspaces
 Code:
 ```
@@ -37,6 +38,7 @@ Result:
 ![Picture 01](src/01.png)
 
 <div id='2'></div>
+
 ## 2. Check partitions
 Code:
 ```
@@ -46,6 +48,7 @@ Result:
 ![Picture 02](src/02.png)
 
 <div id='3'></div>
+
 ## 3. Check cpu, ram, network
 ### 3.1 Check system realtime
 Code:
