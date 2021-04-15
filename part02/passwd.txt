@@ -1,0 +1,8 @@
+Go to CentOS WebPanel Admin GUI at http://SERVER_IP:2030/
+
+http://118.69.63.53:2030
+SSL: https://118.69.63.53:2031
+---------------------
+Username: root
+Password: ssh server root password
+MySQL root Password: 2lhznhxpLdyX

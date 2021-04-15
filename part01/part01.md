@@ -57,7 +57,7 @@ top
 ```
 Result:
 ![Picture 03](src/03.png)
-Explain:
+> Explain:
 
 \- We can see system report at realtime monitoring with:
 * `load average` as CPU GHz
@@ -97,7 +97,7 @@ htop # as a full monitor tool.
 Result:
 ![Picture 07](src/07.png)
 
-Explain:
+> Explain:
 - We can use `htop` to see CPU stat, Mem stat and many process which is running in system. `htop` is a realtime tool.
 
 <div id='5'></div>
@@ -108,8 +108,10 @@ Code:
 ls && ls -la
 ```
 Result:
+
 ![Picture 08](src/08.png)
-Explain: `ls` is command to show files/directories which have in dir, `ls -la` can also see `chmod` status of files/ folders inside.
+
+> Explain: `ls` is command to show files/directories which have in dir, `ls -la` can also see `chmod` status of files/ folders inside.
 
 <div id='6'></div>
 
@@ -149,7 +151,7 @@ Result:
 
 ![Picture 11](src/11.png)
 
-Explain: 
+> Explain: 
 * There are 3 types of rule with `r-read`, `w-write`, `x-excute` match with 4 types of urgent `u-user`, `g-group`, `o-other`, `a-all`.
 * We can also using `chmod 777 hello.sh` for example to grant role with `1-excute`, `2-write`, `4-read`. The order of number is presented as `user_group_other`.
 
@@ -161,7 +163,7 @@ Code:
 ```
 vi || gedit || nano
 ```
-Explain:
+> Explain:
 * For `gedit`, we using as notepad
 * For `nano`, when we editted, we can use `ctrl + s` to save and `ctrl + x` to exit
 * For `vi`, press `i` to using insert mode. `ESC` to exit insert, `:wq` to save and exit, `:q!` to ignore change and exit.
@@ -198,7 +200,7 @@ Result:
 
 ![Picture 14](src/14.png)
 
-Explain: Symbolic Links is a method which new link is linked to the older file. Both files have the same content. We can copy the sym file to any without interrupted the link. It likes a Shorcut in Windows. And when the origin file is removed, the sym link will be interrupted.
+> Explain: Symbolic Links is a method which new link is linked to the older file. Both files have the same content. We can copy the sym file to any without interrupted the link. It likes a Shorcut in Windows. And when the origin file is removed, the sym link will be interrupted.
 
 <div id='11'></div>
 
@@ -215,7 +217,7 @@ Result:
 
 ![Picture 15](src/15.png)
 
-Explain: This the the low-level links. the both files is linked to the same address space (which we call #inode). When one of the two is deleted. The other will not be effected!
+> Explain: This the the low-level links. the both files is linked to the same address space (which we call #inode). When one of the two is deleted. The other will not be effected!
 
 <div id='12'></div>
 
@@ -238,7 +240,7 @@ Result 02:
 
 ![Picture 17](src/17.png)
 
-Explain: This type of compress is `tar.gz` compressed. So we can see the `z` tag in the `tar -czvf` and `tar -xzvf`. If we want to add password for compress, we can use `tar` with `openssl` or `gpg` tool to encrypt. The other way is using `zip` instead of `tar` as below:
+> Explain: This type of compress is `tar.gz` compressed. So we can see the `z` tag in the `tar -czvf` and `tar -xzvf`. If we want to add password for compress, we can use `tar` with `openssl` or `gpg` tool to encrypt. The other way is using `zip` instead of `tar` as below:
 
 Code:
 
@@ -269,7 +271,7 @@ Result sample:
 
 ![Picture 18](src/18.png)
 
-Explain: `tx` and `rx` is `transmitted` and `received` data in network.
+> Explain: `tx` and `rx` is `transmitted` and `received` data in network.
 
 <div id='14'></div>
 
@@ -299,7 +301,7 @@ Code:
 telnet <ip> <port>
 ```
 
-Explain: This is the old way to checking open port. The newly of this protocol is `SSH`.
+> Explain: This is the old way to checking open port. The newly of this protocol is `SSH`.
 
 Result 03:
 
@@ -317,7 +319,7 @@ Result 04:
 
 ![Picture 22](src/22.png)
 
-Explain: using `-c 5` to define the number of packet transfer to target host.
+> Explain: using `-c 5` to define the number of packet transfer to target host.
 
 ## 14.4 ssh
 
@@ -424,7 +426,7 @@ Result:
 
 ![Picture 29](src/29.png)
 
-Explain: The example above will scan line by line and if the line have `ahihi`, awk print it. `NR` will show the line number.
+> Explain: The example above will scan line by line and if the line have `ahihi`, awk print it. `NR` will show the line number.
 
 ## 18.3 sed
 
@@ -512,7 +514,7 @@ Result:
 
 ![Picture 36](src/36.png)
 
-Explain: the result show that, `1c1` we need to change the first line of file1 to get the same as file2.
+> Explain: the result show that, `1c1` we need to change the first line of file1 to get the same as file2.
 
 ## 18.11 xargs - build and execute command lines from standard input
 xargs is a tool support execute command with may options.
