@@ -134,7 +134,7 @@ Result with PHP7.4:
 
 ```
 CREATE USER 'wpuser'@'localhost' IDENTIFIED BY '123456a@';
-GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'wpuser'@'localhost';
 FLUSH PRIVILEGES;
 
 # This is my trick, we can set some possible rule only need for users
