@@ -545,9 +545,13 @@ Code:
 netstat <options>
 ```
 
-Example Result:
+Example Result 01:
 
 ![Picture 39](src/39.png)
+
+Result 02:
+
+![Picture 46](src/46.png)
 
 ## 18.14 kill, pkill
 While `kill` is a kill system call, `pkill` is also kill but can determine the PIDs for us, based on things like, process name, owner of the process, session id, etc.
