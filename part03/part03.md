@@ -6,7 +6,7 @@
 # *~~ MENU FOR PART 03 ~~*
 
 1. <a href='#1'>LAMP Stack</a>
-1. <a href='#2'>LEMP Stacck</a>
+1. <a href='#2'>LEMP Stack</a>
 1. <a href='#3'>Wordpress with LAMP and DNS</a>
 
 <div id='1'></div>
