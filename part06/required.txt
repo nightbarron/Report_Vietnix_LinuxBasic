@@ -1,0 +1,8 @@
++ reverse proxy (nginx)  hình thức compile cả nginx và apache 
+
+  + mysql (bật remote mysql từ xa),
+  + vstpd
+  + phpmyadmin
+  + cho phép truy cập port 80, 443, 3306, 22
+  + build wordpress webiste trên chính mô hình trên, cho phép truy cập mysql từ xa và sử dụng được vsftpd
+  + build lavarel website trên chính mô hình trên, cho phép truy cập mysql từ xa và sử dụng được vsftpd

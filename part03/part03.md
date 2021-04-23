@@ -157,6 +157,7 @@ unzip latest.zip
 cd wordpress
 
 cp wp-config-sample.php wp-config.php
+
 # Then edit the wp-config.php file as the username, password above
 ```
 
