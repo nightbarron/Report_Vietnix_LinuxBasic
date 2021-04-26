@@ -2,6 +2,15 @@
 
 # *~~ MENU FOR PART 06 ~~*
 
+1. <a href='#1'>Manual NGINX</a>
+1. <a href='#2'>Manual Compile Apache2</a>
+1. <a href='#3'>Install Mysql</a>
+1. <a href='#4'>Install PHP/ PHPmyAdmin</a>
+1. <a href='#5'>VSFTPD</a>
+1. <a href='#6'>Install Wordpress on LAMP Model</a>
+1. <a href='#7'>Install Laravel on LAMP Model</a>
+
+<div id='1'></div>
 
 # 1. Manual NGINX
 
@@ -94,6 +103,8 @@ http {
 
 !['Picture 02'](src/02.png)
 
+<div id='2'></div>
+
 # 2. Manual Compile Apache2
 
 ## 2.1 Apache2 Dependancies
@@ -145,6 +156,8 @@ sudo /usr/local/apache2/bin/httpd
 
 !['Picture 03'](src/03.png)
 
+<div id='3'></div>
+
 # 3. Install Mysql
 
 > See Part04 #2
@@ -161,6 +174,8 @@ mysql> FLUSH PRIVILEGES;
 RESULT:
 
 !['Picture 04'](src/04.png)
+
+<div id='4'></div>
 
 # 4. Install PHP/ PHPmyAdmin
 
@@ -200,7 +215,7 @@ nano /usr/local/apache2/conf/httpd.conf
 
 # Add module and IMPORT php.conf
 
-LoadModule php_module modules/lib.so
+LoadModule php_module modules/libphp.so
 Include "conf/php.conf"
 
 ###############################
@@ -267,7 +282,15 @@ Result 02, PhpMyAdmin
 
 !['Picture 06'](src/06.png)
 
-# 5. Install Wordpress on LAMP Model
+<div id='5'></div>
+
+# 5. VSFTPD
+
+> See part 04 #3
+
+<div id='6'></div>
+
+# 6. Install Wordpress on LAMP Model
 
 > See Part 03 #3 for more details!
 
@@ -324,3 +347,95 @@ Result 02:
 Result 03:
 
 !['Picture 09'](src/09.png)
+
+<div id='7'></div>
+
+# 7. Install Laravel on LAMP Model
+
+> See part 04 #6 to more detail!
+
+```
+# Disable wordpress.conf
+
+cd /usr/local/apache2/conf
+
+mv wordpress.conf wordpress.conf.disabled
+
+nano /usr/local/apache2/conf/httpd.conf
+
+# Edit httpd.conf, disable 'Include "conf/wordpress.conf"', Add new line 'Include "conf/laravel.conf"'
+
+# Create Laravel Config for Apache2
+
+nano laravel.conf
+
+# Edit Like below
+
+VirtualHost *:8080>
+
+        ServerAdmin webmaster@example.com
+        DocumentRoot /var/www/html/laraveldir/public
+        ServerName laravel.tuandlh.info
+
+        <Directory />
+#               Require all granted
+                Options Indexes FollowSymLinks
+                AllowOverride None
+                DirectoryIndex index.php
+                Require all granted
+        </Directory>
+
+        <Directory /var/www/html/laraveldir>
+                AllowOverride All
+        </Directory>
+
+</VirtualHost>
+
+
+############################################
+
+# Config Database!
+
+mysql -uroot -p
+
+CREATE USER 'larauser'@'%' IDENTIFIED BY '123456a@';
+GRANT ALL PRIVILEGES ON * . * TO 'larauser'@'%';
+FLUSH PRIVILEGES;
+
+# Relogin with larauser in MySQL
+
+CREATE DATABASE laraveldb;
+FLUSH PRIVILEGES;
+
+####
+
+# Install composer
+
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+# Install Laravel
+
+cd /var/www/html
+sudo composer create-project --prefer-dist laravel/laravel laraveldir
+
+cd laraveldir/
+nano .env
+
+# Then edit database config like above
+
+chown -R www-data:www-data /var/www/html/laraveldir/
+chmod -R 775 /var/www/html/laraveldir/
+
+# Restart Apache2
+
+```
+
+Result: 
+
+!['Picture 10'](src/10.png)
+
+# HAPPY ENDDING!
+
+<a href='../README.md'>Coming back!</a>
