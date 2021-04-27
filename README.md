@@ -9,5 +9,6 @@
 * <a href='part02/part02.md'>Part 2 - Domain/ SSL</a>
 * <a href='part03/part03.md'>Part 3 - LAMP stack/ LEMP stack, Wordpress</a>
 * <a href='part04/part04.md'>Part 4 - Remote MySQL/ VSFTPD/ PhpAdmin & Lavarel Framework</a>
-* <a href='part05/part05.md'>Part 5 - Manual NGINX Install from Source</a>
+* <a href='part05/part05.md'>Part 5 (option) - Manual NGINX Install from Source</a>
 * <a href='part06/part06.md'>Part 6 - Manual NGINX, Apache2, VSFTPD, MySQL</a>
+* <a href='part07/part07.md'>Part 7 - BACKUP MySQL daily with BashShell and Python</a>
