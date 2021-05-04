@@ -8,7 +8,6 @@
   + Gói tin có destination là IP không phải của server, thì server xử lý như nào.
 
 2/ Viết markdown report: Demo sử dụng module TRACE để theo dõi gói tin trong hai kịch bản:
-
 - Theo dõi gói SYN, từ IP công ty đến máy ảo lab, đi như thế nào.
 - Theo dõi gói icmp từ máy ảo ping đi 1.1.1.1 đi như thế nào.
 
@@ -17,5 +16,5 @@
  + Cho phép/Chặn tất cả ip mới truy cập đến IP dest A.B.C.D port YYY
  + Cho phép/Chặn ip Y.J.K.F truy cập đến IP dest A.B.C.D port YYY với TTL 128,64 và Length 1000
  + Đặt comment cho 1 iptables rules bất kỳ.
- 
+
 4/ Tìm hiểu về công cụ tcpdump, những options có thể dùng để debug network.
