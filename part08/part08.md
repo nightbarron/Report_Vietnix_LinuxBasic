@@ -58,7 +58,7 @@ Target Values: Following are the `possible special values` that you can specify 
 * `QUEUE` – Firewall will pass the packet to the userspace.
 * `RETURN` – Firewall will stop executing the next set of rules in the current chain for this packet. The control will be returned to the calling chain.
 
-### Simulation
+### Simulation: (Simplify)
 
 1. Destination is IP of Server:
 
@@ -87,10 +87,12 @@ Packets/Network > PREROUTING/nat > Routing decision > FORWARD/filter > Routing d
 # 2. TRACKING some packets!!! (using TCPDUMP)
 
 
-### 2.1 Tracking SYN from Vietnix's IP to Lab Server
+### 2.1 Tracking SYN from Vietnix's IP to Lab Server (using web request)
 
 ```
 tcpdump -i vmnet8 -n
+# OR for only SYN/ACK packets
+tcpdump -nn -i vmnet8 "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"
 ```
 
 ![Picture 03](src/03.png)
@@ -138,3 +140,69 @@ iptables -A INPUT --dport 22 -j ACCEPT -m comment --comment "allow ssh"
 ```
 
 # 4. TCPDUMP details
+
+### 4.1 Define
+
+`tcpdump` is a data-network packet analyzer computer program that runs under a command line interface. It allows the user to `display TCP/IP` and other packets being transmitted or received over a network to which the computer is attached. Distributed under the BSD license, `tcpdump` is free software.
+
+### 4.2 Options
+
+```
+# List all network interfaces
+tcpdump -D
+
+# Capture in one card!!!
+tcpdump -i eth0         # OR tcpdump --interface any
+
+# Limited the packet captured
+tcpdump -c 5
+
+# Disable resolve IP to Hostname
+tcpdump -nn
+
+# Change content to ASCII
+tcpdump -A
+
+# Filter ICMP
+tcpdump icmp
+
+# Filter HOST
+tcpdump host <IP host>
+
+# Filter port
+tcpdump port 80
+
+# Filter source, destination
+tcpdump src <ip> dst <ip>
+
+# Using complex expressions
+tcpdump -i any -c5 -nn src 192.168.75.75 and port 80     # Filter with src IP and port 80
+
+# OR other like:
+tcpdump -i any -c5 -nn "port 80 and (src 192.168.122.98 or src 54.204.39.132)"
+
+# Save to file
+tcpdump -w <file name>.pcap
+
+# Readable *.pcap converter
+tcpdump -qns 0 -X -r <*.pcap>
+# OR
+tcpdump -ttttnnr <*.pcap>
+
+
+
+```
+
+`TCP Flags`: typical values for this field include:
+
+- `[S]`	SYN	Connection Start
+- `[F]`	FIN	Connection Finish
+- `[P]`	PUSH	Data push
+- `[R]`	RST	Connection reset
+- `[.]`	ACK	Acknowledgment
+
+# HAPPY ENDDING!
+
+<a href='../README.md'>Coming back!</a>
+
+
