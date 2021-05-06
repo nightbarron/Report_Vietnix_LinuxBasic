@@ -2,6 +2,14 @@
 
 # *~~ MENU FOR PART 08 IPTABLES && NETWORK FLOW ~~*
 
+1. <a href='#1'>Iptables packet flow diagram</a>
+1. <a href='#2'>TRACKING some packets</a>
+1. <a href='#3'>IPTABLES Rules</a>
+1. <a href='#4'>TCPDUMP details</a>
+1. <a href='#5'>DNS resolve</a>
+
+<div id='1'></div>
+
 # 1. Iptables packet flow diagram
 
 ### What is iptables?
@@ -84,6 +92,8 @@ Packets/Network > PREROUTING/nat > Routing decision > FORWARD/filter > Routing d
 
 > Explain: Just as the `#1 Destination is IP of Server` except at this part, `Routing decision` recognizes that packets not belong to Server, so it will be send to `FORWARD/filter`. If the `FORWARD chain` know where is the packets's destination, it will send to `other Routing decision`, else `FORWARD/filter` will DROP it. 
 
+<div id='2'></div>
+
 # 2. TRACKING some packets!!! (using TCPDUMP)
 
 
@@ -113,6 +123,8 @@ tcpdump -i vmnet8 -n icmp
 
 > Explain: This is full `tracepath` of the connection!
 
+<div id='3'></div>
+
 # 3. IPTABLES Rules
 
 ```
@@ -138,6 +150,8 @@ iptables -A OUTPUT -m ttl --ttl-gt 64,128 -m length --length 1000 -s <block ip> 
 iptables -A INPUT --dport 22 -j ACCEPT -m comment --comment "allow ssh"
  
 ```
+
+<div id='4'></div>
 
 # 4. TCPDUMP details
 
@@ -200,6 +214,24 @@ tcpdump -ttttnnr <*.pcap>
 - `[P]`	PUSH	Data push
 - `[R]`	RST	Connection reset
 - `[.]`	ACK	Acknowledgment
+
+<div id='5'></div>
+
+# 5. DNS resolve
+
+> How can computer know to connect to `103.200.21.192` while user types `vietnix.vn` in their browser?
+
+In the simple way, we can following the path below:
+```
+User typing: www.vietnix.vn -> REQUEST to DNS Server
+DNS Server -> LOOKUP for records in DNS network (From Top-level Domain) 
+DNS Server -> RESPONSE 103.200.21.192 to browser
+User's browser using IP -> CONNECT to real server (or maybe Cloudflare)
+```
+
+> DNS path to resolve google.com
+
+![Picture 06](src/06.jpg)
 
 # HAPPY ENDDING!
 
