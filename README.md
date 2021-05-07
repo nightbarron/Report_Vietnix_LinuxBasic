@@ -13,3 +13,4 @@
 * <a href='part06/part06.md'>Part 6 - Manual NGINX, Apache2, VSFTPD, MySQL</a>
 * <a href='part07/part07.md'>Part 7 - BACKUP MySQL daily with BashShell and Python</a>
 * <a href='part08/part08.md'>Part 8 - Iptables and network flows!!!</a>
+* <a href='part09/part09.md'>Part 9 - LVM and VestaCP</a>

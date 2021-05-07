@@ -1,0 +1,7 @@
+2 em giúp anh làm 1 máy ảo với dung lượng là 10GB và add thêm 1 ổ cứng nữa sao cho 2 ổ cứng này đều sử dụng được cùng là /   (LVM)
+
++ Cài các control panel (Vestacp, Cpanel ) và add domain , tạo user , tạo ftp, up soucer laravel và wordpress  thử. 
+
++ Vestacp  điều chỉnh lại backup ở user (ví dụ ```a```) 5 phút backup 1 lần, giữ lại 5 bản. Các user khác vẫn giữ mặc định
+
++  tìm hiểu thêm về package trong vestacp.
