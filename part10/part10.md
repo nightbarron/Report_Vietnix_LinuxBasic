@@ -71,6 +71,20 @@ rsync -rv rsync://ftp.hk.debian.org/debian/ /var/www/html/debian
 
 ```
 
+At Client Side:
+
+```
+[base]
+name=CentOS-$releasever - Base
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os&infra=$infra
+baseurl=http://mirror.vietnix.vn/centos/$releasever/os/$basearch/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+.....
+.....
+
+```
+
 # HAPPY ENDDING!
 
 <a href='../README.md'>Coming back!</a>
