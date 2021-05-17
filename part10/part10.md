@@ -42,6 +42,35 @@ enabled=1
 gpgcheck=0
 
 ```
+
+
+
+# Other PRO part
+
+```
+
+## Out of date
+# wget --recursive --no-parent -nH --reject="index.html*, *.iso" http://mirror.centos.org/centos/.
+
+# Cent OS
+rsync -rv rsync://mirror.aktkn.sg/centos/ /var/www/html/centos
+
+# Ubuntu
+
+# Fedora
+rsync -rv rsync://download.nus.edu.sg/epel/ /var/www/html/fedora
+
+# Debian
+rsync -rv rsync://ftp.hk.debian.org/debian/ /var/www/html/debian
+
+# RSYNC everyday: `crontab -e`
+
+0 */4 * * * rsync --aqzH --delete <src rsync> <dest> # Every 4 hours
+
+# Optional --ignore-existing will ignore content's checking if file name existed!!!
+
+```
+
 # HAPPY ENDDING!
 
 <a href='../README.md'>Coming back!</a>

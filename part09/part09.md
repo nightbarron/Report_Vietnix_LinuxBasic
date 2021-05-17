@@ -66,6 +66,11 @@ lvextend -L+9.9G /dev/ubuntu-vg/ubuntu-lv # I don't know but it missing 1 byte :
 # Resize of file
  resize2fs /dev/ubuntu-vg/ubuntu-lv
 
+ # OR
+df -Th /        # Check Format storage type, if xfs, then:
+xfs_growfs /dev/centos/root
+
+
  # Check /dev/mapper/ubuntu--vg-ubuntu--lv
  df
 
