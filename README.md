@@ -15,3 +15,5 @@
 * <a href='part08/part08.md'>Part 8 - Iptables and network flows!!!</a>
 * <a href='part09/part09.md'>Part 9 - LVM and VestaCP</a>
 * <a href='part10/part10.md'>Part 10 - Vietnix Repo</a>
+* <a href='part11/part11.md'>Part 11 - SuPHP Handler</a>
+* <a href='part12/part12.md'>Part 12 - MultiHost Apache2</a>
