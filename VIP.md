@@ -49,14 +49,29 @@ server {
 
         error_log       /home/logs/nginx/error_nginx;
 
-        location / {
-                try_files $uri @proxy ;
+        location ~ \.(jpg|css|pdf...) {
+                expires max;
+                try_files $uri =404;
         }
 
         location @proxy {
-                proxy_set_header X-Real-IP $remote_addr;
+                proxy_connect_timeout 59s;
+                proxy_send_timeout   600;
+                proxy_read_timeout   600;
+                proxy_buffer_size    64k;
+                proxy_buffers     16 32k;
+                proxy_busy_buffers_size 64k;
+                proxy_temp_file_write_size 64k;
+                proxy_pass_header Set-Cookie;
+                proxy_redirect     off;
+                proxy_hide_header  Vary;
+                proxy_set_header   Accept-Encoding '';
+                proxy_ignore_headers Cache-Control Expires;
+                proxy_set_header   Referer $http_referer;
+                proxy_set_header   Host   $host;
+                proxy_set_header   Cookie $http_cookie;
+                proxy_set_header   X-Real-IP  $remote_addr;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header Host $http_host;
                 proxy_pass http://127.0.0.1:8080;  #change to your internal server IP
                 proxy_redirect off;
         }
@@ -66,7 +81,6 @@ server {
 
 # Default Nginx for Wordpress
 
-# Upstream to abstract backend connection(s) for php
 upstream php {
         server unix:/tmp/php-cgi.socket;
         server 127.0.0.1:9000;
